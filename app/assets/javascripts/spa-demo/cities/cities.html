@@ -2,6 +2,26 @@
 	<h3>Cities</h3>
 	<span>(from spa-demo/cities/cities.html)</span>
 
+	<form>
+		<span>
+			<label>Name:</label>
+			<input name="name" ng-model="citiesVM.city.name"
+				required="required"/>
+		</span>
+		<button ng-if="!citiesVM.city.id" type="submit"
+				ng-click="citiesVM.create()">Create City</button>
+
+		<span ng-if="citiesVM.city.id">
+
+			<button type="submit"
+				ng-click="citiesVM.update()">Update City</button>
+
+			<button type="submit"
+				ng-click="citiesVM.remove()">Delete City</button>
+
+		</span>
+	</form>
+
 	<ul>
 		<li ng-repeat="city in citiesVM.cities | orderBy: 'name'">
 			<a ng-click="citiesVM.edit(city)">{{city.name}}</a>

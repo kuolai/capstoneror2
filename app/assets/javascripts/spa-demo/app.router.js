@@ -9,10 +9,10 @@
   function RouterFunction($stateProvider, $urlRouterProvider, APP_CONFIG) {
     $stateProvider.state("home", {
       url: "/",
-      templateUrl: APP_CONFIG.main_page_html,
+      templateUrl: APP_CONFIG.main_page_html
       // controller: ,
       // controllerAs: ,
-      })
+      }),
     $urlRouterProvider.otherwise("/");
 }
 })();

@@ -20,7 +20,6 @@
             bindToController: true,
             controller: "spa-demo.cities.CitiesController",
             controllerAs: 'citiesVM',
-            link: link,
             restrict: 'E',
             scope: {},
             link: link
@@ -28,7 +27,7 @@
         return directive;
 
         function link(scope, element, attrs) {
-        	console.log(CitiesDirective, scope)
+        	console.log("from CitiesDirective link()", scope);
         }
     }
 
